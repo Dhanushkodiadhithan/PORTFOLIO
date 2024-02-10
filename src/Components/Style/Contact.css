@@ -46,7 +46,6 @@
 }
 .contact .main .send{
     display: flex;
-    justify-content: end;
     margin-top: 30px;
 }
 .contact .main .send .btn{

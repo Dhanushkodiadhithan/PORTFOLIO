@@ -4,8 +4,6 @@
         background-color: antiquewhite;
     }
     header{
-        position: fixed;
-        top: 0px;
         width: 100%;
         display: block;
         text-align: center;
