@@ -1,4 +1,5 @@
 import '../Style/Footer.css'
+import '../Responsive/RFooter.css'
 
 const Footer = ()=>{
     return(
