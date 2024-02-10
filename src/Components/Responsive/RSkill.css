@@ -1,0 +1,14 @@
+@media only screen and (max-width: 600px) {
+    .Skill{
+        padding: 20px 10%;
+    }
+    .Skill .skills{
+        flex-direction: column;
+    }
+    .Skill .skills .tech{
+        width: 100%;
+    }
+    .Skill .skills .prof{
+        width: 100%;
+    }
+}

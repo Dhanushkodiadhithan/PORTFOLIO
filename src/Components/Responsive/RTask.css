@@ -1,0 +1,8 @@
+@media only screen and (max-width: 600px) {
+    .task{
+        padding: 20px 10%;
+    }
+    .task .main{
+        padding: 0;
+    }
+}

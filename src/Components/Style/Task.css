@@ -1,0 +1,73 @@
+.task .title{
+    color: white;
+    text-align: center;
+    color: skyblue;
+    border-bottom: 3px solid gray;
+    margin-bottom:40px;
+}
+.task{
+    background-color:#1d1b1b;
+    padding:40px  100px;
+}
+.task .title .ylw{
+    color: yellow;
+}
+.task .main{
+    padding: 0px 350px;
+}
+.task .main .task-one{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+    margin-top: 60px;
+}
+.task .main .task-two{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+    margin-top: 60px;
+}
+.task .main .task-three{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+    margin-top: 60px;
+}
+.task .main .task-four{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+    margin-top: 60px;
+}
+.task .main .task-five{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+    margin-top: 60px;
+}
+.task .main .task-six{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+    margin-top: 60px;
+}
+.task .main .task-seven{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+    margin-top: 60px;
+}

@@ -1,0 +1,13 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --one:#1D1C1C;
+  --two:yellow;
+  --three:rgb(125, 211, 231);
+}
+html{
+  scroll-behavior: smooth;
+}

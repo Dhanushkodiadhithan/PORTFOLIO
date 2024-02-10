@@ -1,0 +1,11 @@
+@media only screen and (max-width: 600px) {
+    .about img{
+        display: none;
+    }
+    .about{
+        padding: 20px 10%;
+    }
+    .about .content{
+        margin-left: 0px;
+    }
+}

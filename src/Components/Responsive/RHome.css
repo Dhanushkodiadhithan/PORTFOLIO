@@ -1,0 +1,16 @@
+@media only screen and (max-width: 600px) {
+    section{
+       flex-direction: column-reverse;
+       padding: 0px;
+    }
+    .home img{
+        margin-left: 0px;
+        height: 90vh;
+        width:100%
+        
+    }
+    .home .content{
+        padding: 20px 10%;
+    }
+
+}

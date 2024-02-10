@@ -1,0 +1,26 @@
+.about{
+    background-color:#1d1b1b;
+    display: flex;
+    padding:120px 150px;
+}
+.about img{
+    border-radius: 50%;
+    border:3px solid yellow;
+}
+.about .content .ylw{
+    color: yellow;
+}
+.about .content{
+    margin-left: 250px;
+}
+.about .content h1{
+    margin-bottom: 100px;
+    border-bottom: 3px solid gray;
+    color:skyblue
+}
+.about .content p{
+    color: white;
+    font-size:20px;
+    margin: 20px 0px 20px 0px;
+    text-align: justify;
+}

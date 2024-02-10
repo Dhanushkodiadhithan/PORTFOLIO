@@ -1,0 +1,55 @@
+section{
+    background-color: black;
+    display: flex;
+    padding: 100px 100px 0px 250px;
+    justify-content: space-between;
+}
+.home .content{
+    color: white;
+    padding-top:100px;
+    cursor:default;
+}
+.content h1 span{
+    color: var(--two);
+}
+.home img{
+    margin-left: 70px;
+}
+.home .content h1{
+    font-size:xx-large;
+    margin: 20px 0px 20px 0px;
+}
+.home .content h2{
+    margin: 0px 0px 20px 0px;
+}
+.home .content button{
+    padding: 10px;
+    font-weight:bolder;
+    font-size: larger;
+    color: white;
+    border: 2px solid var(--three);
+    border-radius: 10px;
+    background-color: #1D1C1C;
+    box-shadow: 1px 2px 10px var(--three);
+}
+.home .content button:hover{
+    color:black;
+    background-color:var(--three);
+    cursor: pointer;
+}
+.home .content .list ul{
+    display: flex;
+    list-style: none;
+}
+.home .content .list ul li{
+    padding: 20px 20px 0px 0px;
+    font-size:larger;
+}
+.home .content .list ul li i{
+    color:#0000FF;
+}
+.home .content .list ul li i:hover{
+    color: white;
+}
+
+
