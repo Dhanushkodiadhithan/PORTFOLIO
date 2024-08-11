@@ -71,3 +71,19 @@
     font-size: x-large;
     margin-top: 60px;
 }
+.task .main .task-eight{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+    margin-top: 60px;
+}
+.task .main .task-nine{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+    margin-top: 60px;
+}

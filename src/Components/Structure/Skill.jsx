@@ -38,7 +38,7 @@ const Skill = () => {
                             <h2>REACT</h2>
                             <span className="bar">
                                 <span className="per">
-                                    <span className="react-num">40%</span>
+                                    <span className="react-num">70%</span>
                                 </span>
                             </span>
                         </div>

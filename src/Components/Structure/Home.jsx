@@ -11,7 +11,7 @@ const Home = () => {
       <h1>I am <span>Dhanushkodi Adhithan </span>. M</h1>
       <h2>BE - CSE 3<sup>rd</sup> Year </h2>
       <h2>Krishnasamy College of Engineering and Technology</h2>
-      <button>RESUME</button>
+      <a href="/Dhanushkodi adhithan M (RESUME).pdf" download="Dhanushkodi adhithan M (RESUME).pdf"><button>RESUME</button></a>
       <div className="list">
         <ul>
           <li>
