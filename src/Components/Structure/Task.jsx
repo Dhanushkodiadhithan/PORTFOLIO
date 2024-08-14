@@ -43,6 +43,10 @@ const Task = ()=>{
                     <h3 className="task-title">Food App</h3>
                     <h4 className="task-view"><a href="https://foodapp-d5bq.onrender.com" target='_blank' rel="noopener noreferrer">View</a></h4>
                 </div>
+                <div className="task-ten">
+                    <h3 className="task-title">Cricket calculator</h3>
+                    <h4 className="task-view"><a href="https://cricket-vmm0.onrender.com" target='_blank' rel="noopener noreferrer">View</a></h4>
+                </div>
             </div>
         </div>
         </>

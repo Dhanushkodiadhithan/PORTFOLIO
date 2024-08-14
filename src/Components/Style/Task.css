@@ -87,3 +87,11 @@
     font-size: x-large;
     margin-top: 60px;
 }
+.task .main .task-ten{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+    margin-top: 60px;
+}
