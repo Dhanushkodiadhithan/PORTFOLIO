@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write   # ✅ allow push commits from action
+      contents: write   # allow committing changes
 
     steps:
       - uses: actions/checkout@v3
@@ -27,26 +27,20 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          echo "import os
-from openai import OpenAI
+          cat << 'EOF' > generate_readme.py
+          import os
+          from openai import OpenAI
 
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+          client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-response = client.chat.completions.create(
-    model='gpt-4',
-    messages=[{'role': 'user', 'content': 'Write a detailed README.md for this project with installation, usage, and contribution sections.'}],
-    max_tokens=500
-)
+          response = client.chat.completions.create(
+              model="gpt-4",
+              messages=[{"role": "user", "content": "Write a detailed README.md for this project with installation, usage, and contribution sections."}],
+              max_tokens=500,
+          )
 
-with open('README.md', 'w', encoding='utf-8') as f:
-    f.write(response.choices[0].message.content)
-" > generate_readme.py
-          python generate_readme.py
+          with open("README.md", "w", encoding="utf-8") as f:
+              f.write(response.choices[0].message.content)
+          EOF
 
-      - name: Commit README
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "Auto-generated README via OpenAI" || echo "No changes to commit"
-          git push
+          pyt
