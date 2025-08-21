@@ -1,48 +1,52 @@
 name: Auto Generate README
 
 on:
-  push:
-    branches:
-      - main
+  push:
+    branches:
+      - main
+
 jobs:
-  generate-readme:
-    runs-on: ubuntu-latest
+  generate-readme:
+    runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v3
+    permissions:
+      contents: write   # ✅ allow push commits from action
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
+    steps:
+      - uses: actions/checkout@v3
 
-      - name: Install dependencies
-        run: pip install openai
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
-      - name: Generate README
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          echo "import os
-import openai
+      - name: Install dependencies
+        run: pip install openai
 
-openai.api_key = os.getenv('OPENAI_API_KEY')
+      - name: Generate README
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          echo "import os
+from openai import OpenAI
 
-response = openai.ChatCompletion.create(
-   model='gpt-4',
-   messages=[{'role': 'user', 'content': 'Write a detailed README.md for this project.'}],
-   max_tokens=500
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+
+response = client.chat.completions.create(
+    model='gpt-4',
+    messages=[{'role': 'user', 'content': 'Write a detailed README.md for this project with installation, usage, and contribution sections.'}],
+    max_tokens=500
 )
 
-with open('README.md', 'w') as f:
-   f.write(response.choices[0].message.content)
+with open('README.md', 'w', encoding='utf-8') as f:
+    f.write(response.choices[0].message.content)
 " > generate_readme.py
-          python generate_readme.py
+          python generate_readme.py
 
-      - name: Commit README
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "Auto-generated README via OpenAI" || echo "No changes to commit"
-          git push
+      - name: Commit README
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Auto-generated README via OpenAI" || echo "No changes to commit"
+          git push
