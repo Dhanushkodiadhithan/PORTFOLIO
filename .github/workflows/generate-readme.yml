@@ -31,11 +31,13 @@ jobs:
           import os
           from openai import OpenAI
 
-          client = OpenAI()
+          client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
           response = client.chat.completions.create(
-              model="gpt-4",
-              messages=[{"role": "user", "content": "Write a detailed README.md for this project with installation, usage, and contribution sections."}],
+              model="gpt-4o-mini",
+              messages=[
+                  {"role": "user", "content": "Write a detailed README.md for this project with installation, usage, and contribution sections."}
+              ],
               max_tokens=500,
           )
 
