@@ -27,7 +27,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          cat << 'EOF' > generate_readme.py
+          cat > generate_readme.py << 'EOF'
           import os
           from openai import OpenAI
 
@@ -43,4 +43,12 @@ jobs:
               f.write(response.choices[0].message.content)
           EOF
 
-          pyt
+          python generate_readme.py
+
+      - name: Commit README
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Auto-generated README via OpenAI" || echo "No changes to commit"
+          git push
